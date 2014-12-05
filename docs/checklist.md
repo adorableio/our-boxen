@@ -10,11 +10,12 @@
   - *what else...?*
 * [itg.zsh-theme](https://github.com/itsthatguy/itg.zsh-theme)
   - this repo's readme needs to be updated to match current implementation
+* Google Drive
 * 1Password
+  - should add the adorable.io vault, if possible
 * Pair script
   - configured through a file in either `~/.pairs` or per project
 * Screenhero
-* Google Drive
 * Spectacle?
 * Glui
 * BTSync
