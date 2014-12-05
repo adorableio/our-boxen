@@ -16,6 +16,7 @@
   - should add the adorable.io vault, if possible
 * iTerm2
 * vim
+  - [zjm] MacVim or just homebrew vim?
 * Pair script
   - configured through a file in either `~/.pairs` or per project
 * Screenhero
