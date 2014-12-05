@@ -10,6 +10,7 @@
   - *what else...?*
 * [itg.zsh-theme](https://github.com/itsthatguy/itg.zsh-theme)
   - this repo's readme needs to be updated to match current implementation
+  - The pairscript found here should not be used in our boxen setup... we need a new one that meets our needs
 * Google Drive
 * 1Password
   - should add the adorable.io vault, if possible
