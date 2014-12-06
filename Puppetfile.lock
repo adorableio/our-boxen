@@ -119,9 +119,19 @@ GITHUBTARBALL
     spectacle (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-sublime_text
+  specs:
+    sublime_text (1.1.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-vagrant
+  specs:
+    vagrant (3.2.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-xquartz
@@ -171,6 +181,8 @@ DEPENDENCIES
   screenhero (= 1.0.1)
   spectacle (= 1.0.0)
   stdlib (= 4.2.1)
+  sublime_text (= 1.1.0)
   sudo (= 1.0.0)
+  vagrant (= 3.2.0)
   xquartz (= 1.2.1)
 

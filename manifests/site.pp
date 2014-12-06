@@ -84,7 +84,7 @@ node default {
     ]:
   }
 
-  # adorable-specific applications
+  # Adorable-specific Applications
   include flowdock
   include googledrive
   include iterm2::stable
@@ -93,11 +93,15 @@ node default {
   include chrome
   include firefox
   include spectacle
+  include virtualbox
 
+  # We want Sublime Text 3
   include sublime_text
   sublime_text::package {'Emmet':
     source => 'sergeche/emmet-sublime'
   }  
+
+  class { 'vagrant': }
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,

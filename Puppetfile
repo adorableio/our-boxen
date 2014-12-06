@@ -68,6 +68,8 @@ github "firefox",     "1.2.3"
 github "btsync",      "1.0.0"
 github "spectacle",   "1.0.0"
 github "sublime_text","1.1.0"
+github "vagrant",     "3.2.0"
+github "virtualbox",  "1.0.13"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
