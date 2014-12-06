@@ -64,12 +64,12 @@ node default {
   }
 
   # Shim the chruby installer- it doesn't create the necessary directories
-  file { "${boxen::config::home}/chruby/opt":
-    require => File["${boxen::config::home}/chruby"],
-    ensure => "directory",
-    owner => $boxen_user,
-    group => "staff"
-  }
+  #file { "${boxen::config::home}/chruby/opt":
+  #  require => File["${boxen::config::home}/chruby"],
+  #  ensure => "directory",
+  #  owner => $boxen_user,
+  #  group => "staff"
+  #}
 
   # default ruby versions
   ruby::version { '1.9.3': }
@@ -89,7 +89,7 @@ node default {
   include googledrive
   include iterm2::stable
   include screenhero
-  include btsync
+  # include btsync # Currently does not work; see https://github/boxen/puppet-btsync/issues/2
   include chrome
   include firefox
   include spectacle
