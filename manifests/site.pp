@@ -57,7 +57,6 @@ node default {
   include dnsmasq
   include git
   include hub
-  include nginx
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
