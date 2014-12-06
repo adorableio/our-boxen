@@ -57,5 +57,12 @@ github "stdlib",      "4.2.1", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",        "1.0.0"
 github "xquartz",     "1.2.1"
 
+# Adorable-centric components
+github "flowdock",    "1.0.0"
+github "googledrive", "1.0.2"
+github "iterm2",      "1.2.2"
+github "screenhero",  "1.0.1"
+github "btsync",      "1.0.0"
+
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
