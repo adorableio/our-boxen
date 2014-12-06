@@ -50,6 +50,16 @@ Service {
   provider => ghlaunchd
 }
 
+# install nvm, nodejs and some modules
+class nvmplusnode {
+  require nvm
+
+  exec { "nvm install":
+    command => "nvm install 0.10",
+    path => "/opt/boxen/bin:/bin"
+  }
+}
+
 Homebrew::Formula <| |> -> Package <| |>
 
 node default {
@@ -67,10 +77,7 @@ node default {
   ruby::version { '1.9.3': }
   ruby::version { '2.1.2': }
 
-  # install nodejs and some modules
-  nodejs::version { 'v0.10': }
-  nodejs::module { 'bower': node_version => 'v0.10' }
-  class { 'nodejs::global': version => 'v0.10' }
+  include nvmplusnode
 
   # common, useful packages
   package {

@@ -79,9 +79,9 @@ GITHUBTARBALL
     nginx (1.4.3)
 
 GITHUBTARBALL
-  remote: boxen/puppet-nodejs
+  remote: boxen/puppet-nvm
   specs:
-    nodejs (4.0.0)
+    nvm (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-onepassword
@@ -182,7 +182,7 @@ DEPENDENCIES
   iterm2 (= 1.2.2)
   module_data (= 0.0.3)
   nginx (= 1.4.3)
-  nodejs (= 4.0.0)
+  nvm (= 1.0.0)
   onepassword (= 1.1.5)
   openssl (= 1.0.0)
   phantomjs (= 2.3.0)
