@@ -15,6 +15,10 @@
   - "users/%{github_login}"
   - common
 
+"ruby::build::ensure": "v20141128"
+"ruby::chruby::ensure": "v0.3.9"
+"ruby::rbenv::ensure": "v0.4.0"
+
 # Many modules make their own hiera data available through the use of
 # puppet-module-data. Some depend on the 'deeper' merge_behavior setting, so
 # remove it at your own risk!
