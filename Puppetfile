@@ -67,6 +67,7 @@ github "chrome",      "1.2.0"
 github "firefox",     "1.2.3"
 github "btsync",      "1.0.0"
 github "spectacle",   "1.0.0"
+github "sublime_text","1.1.0"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.

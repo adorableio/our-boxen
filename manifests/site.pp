@@ -94,6 +94,11 @@ node default {
   include firefox
   include spectacle
 
+  include sublime_text
+  sublime_text::package {'Emmet':
+    source => 'sergeche/emmet-sublime'
+  }  
+
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
     target => $boxen::config::repodir
