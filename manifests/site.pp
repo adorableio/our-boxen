@@ -65,10 +65,10 @@ node default {
   }
 
   # Shim the chruby installer- it doesn't create the necessary directories
-  File { ["/opt/boxen/chruby", "/opt/boxen/chruby/opt"]:
-    before => Ruby,
+  file { "${boxen::config::home}/chruby/opt":
+    require => File["${boxen::config::home}/chruby"],
     ensure => "directory",
-    owner => "$boxen_user,
+    owner => $boxen_user,
     group => "staff"
   }
 
