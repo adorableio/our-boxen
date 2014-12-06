@@ -27,3 +27,5 @@
 * Chrome
 * Firefox
 * Sublime Text 3
+* Vagrant
+* VirtualBox
