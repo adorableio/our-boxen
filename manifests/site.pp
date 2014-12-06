@@ -29,12 +29,6 @@ File {
   owner => $boxen_user
 }
 
-# Shim the chruby installer- it doesn't create the necessary directories
-File {"/opt/boxen/chruby/opt":
-  ensure => "directory",
-  owner => "$boxen_user,
-  group => "staff"
-}
 
 Package {
   provider => homebrew,
@@ -68,6 +62,14 @@ node default {
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
     fail('Please enable full disk encryption and try again')
+  }
+
+  # Shim the chruby installer- it doesn't create the necessary directories
+  File { ["/opt/boxen/chruby", "/opt/boxen/chruby/opt"]:
+    before => Ruby,
+    ensure => "directory",
+    owner => "$boxen_user,
+    group => "staff"
   }
 
   # default ruby versions
