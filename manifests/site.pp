@@ -93,7 +93,8 @@ node default {
   include googledrive
   include iterm2::stable
   include screenhero
-  # include btsync # Currently does not work; see https://github/boxen/puppet-btsync/issues/2
+  # Currently does not work; see https://github/boxen/puppet-btsync/issues/2
+  # include btsync 
   include chrome
   include firefox
   include spectacle
