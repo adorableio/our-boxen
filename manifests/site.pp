@@ -63,17 +63,14 @@ node default {
     fail('Please enable full disk encryption and try again')
   }
 
-  # Shim the chruby installer- it doesn't create the necessary directories
-  #file { "${boxen::config::home}/chruby/opt":
-  #  require => File["${boxen::config::home}/chruby"],
-  #  ensure => "directory",
-  #  owner => $boxen_user,
-  #  group => "staff"
-  #}
-
   # default ruby versions
   ruby::version { '1.9.3': }
   ruby::version { '2.1.2': }
+
+  # install nodejs and some modules
+  nodejs::version { 'v0.10': }
+  nodejs::module { 'bower': node_version => 'v0.10' }
+  class { 'nodejs::global': version => 'v0.10' }
 
   # common, useful packages
   package {
@@ -94,6 +91,10 @@ node default {
   include firefox
   include spectacle
   include virtualbox
+
+  # Install 1Password and Chrome helper
+  include onepassword
+  include onepassword::chrome
 
   # We want Sublime Text 3
   include sublime_text

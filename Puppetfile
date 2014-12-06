@@ -47,7 +47,7 @@ github "homebrew",    "1.9.5"
 github "hub",         "1.3.0"
 github "inifile",     "1.1.1", :repo => "puppetlabs/puppetlabs-inifile"
 github "nginx",       "1.4.3"
-github "nodejs",      "3.8.1"
+github "nodejs",      "4.0.0"
 github "openssl",     "1.0.0"
 github "phantomjs",   "2.3.0"
 github "pkgconfig",   "1.0.0"
@@ -70,6 +70,7 @@ github "spectacle",   "1.0.0"
 github "sublime_text","1.1.0"
 github "vagrant",     "3.2.0"
 github "virtualbox",  "1.0.13"
+github "onepassword", "1.1.5"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
