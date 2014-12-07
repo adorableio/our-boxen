@@ -82,6 +82,16 @@ node default {
     ]:
   }
 
+  # adorable-specific applications
+  include flowdock
+  include googledrive
+  include iterm2::stable
+  include screenhero
+  include btsync
+  include chrome
+  include firefox
+  include spectacle
+
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
     target => $boxen::config::repodir
