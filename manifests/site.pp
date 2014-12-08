@@ -50,16 +50,6 @@ Service {
   provider => ghlaunchd
 }
 
-# install nvm, nodejs and some modules
-class nvmplusnode {
-  require nvm
-
-  exec { "nvm install":
-    command => "nvm install 0.10",
-    path => "/opt/boxen/bin:/bin"
-  }
-}
-
 Homebrew::Formula <| |> -> Package <| |>
 
 node default {
@@ -67,6 +57,7 @@ node default {
   include dnsmasq
   include git
   include hub
+  include nvm
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
@@ -76,8 +67,6 @@ node default {
   # default ruby versions
   ruby::version { '1.9.3': }
   ruby::version { '2.1.2': }
-
-  include nvmplusnode
 
   # common, useful packages
   package {
