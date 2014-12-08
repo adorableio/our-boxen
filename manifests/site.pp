@@ -102,7 +102,8 @@ node default {
 
   # Install 1Password and Chrome helper
   include onepassword
-  include onepassword::chrome
+  # Bug in onepassword::chrome; need to fork and fix
+  # include onepassword::chrome
 
   # We want Sublime Text 3
   include sublime_text
