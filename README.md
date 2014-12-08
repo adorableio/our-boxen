@@ -1,10 +1,66 @@
-# Our Boxen
+# Adorable.io: Our Boxen
 
-This is a template Boxen project designed for your organization to fork and
-modify appropriately.
-The Boxen rubygem and the Boxen puppet modules are only a framework for getting
-things done.
-This repository template is just a basic example of _how_ to do things with them.
+Quickly install all the tools that we use here at Adorable.
+
+This configuration makes a strong attempt to install the necessary tools
+while leaving the primary configuration decisions to you. 
+
+## Dependencies (Adorable)
+**Install the Xcode Command Lines Tools and/or full Xcode.** This will grant you
+the most predictable behavior in building apps like MacVim.
+
+1. Install Xcode from the Mac App Store.
+1. Open Xcode.
+1. Open the Preferences window (`Cmd-,`).
+1. Go to the Downloads tab.
+1. Install the Command Line Tools.
+
+## Installation (Adorable)
+Once you have xcode and the command-line tools (including git) installed you
+can run the following commands to pull down the Adorable configuration and 
+start the installation process.
+
+**To run the boxen installation process** you'll need to enter your `sudo` 
+password and your github username and password when prompted. The prompt happens
+right away and then the rest of the install should proceed without any required
+interaction.
+
+```
+sudo mkdir -p /opt/boxen
+sudo chown ${USER}:staff /opt/boxen
+git clone https://github.com/adorableio/our-boxen /opt/boxen/repo
+cd /opt/boxen/repo
+./script/boxen --no-fde
+```
+
+The `--no-fde` option instructs the system to install without full-disk 
+encryption.
+
+## Notes for Afterwards (Adorable)
+After `boxen` has run and installed all the necessary applications there may be
+additional configuration to be done. Review the list below and apply any 
+config changes you feel appropriate based on your preferences.
+
+* Update your approriate shell config to source the env file created by `boxen`.
+Add the following line to .profile, .bash\_profile, .zprofile, etc.
+
+        [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+
+* To allow **Spectacle** to change window sizes, open General Preferences | 
+Security & Privacy | Accessibility, unlock the Preferences and check the 
+Spectacle box.
+* Open and login/create account for **1Password**
+* [TODO] Explain how to import Adorable vault from BTSync/Google Drive
+* Open and login to **Flowdock**.
+* Open and login to **Screenhero**.
+
+----
+
+**Note**: Everything below this is documentation of the original boxen/boxen 
+repo, and is retained for information purposes when our team wants to update our
+company configuration.
+
+----
 
 ## Getting Started
 
