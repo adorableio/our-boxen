@@ -52,10 +52,11 @@ github "openssl",     "1.0.0"
 github "phantomjs",   "2.3.0"
 github "pkgconfig",   "1.0.0"
 github "repository",  "2.3.0"
-github 'ruby',        '0.1.0', :repo => 'dgoodlad/puppet-chruby'
+github 'ruby',        '8.1.7'
 github "stdlib",      "4.2.1", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",        "1.0.0"
 github "xquartz",     "1.2.1"
+github "autoconf",    "1.0.0"
 
 # Adorable-centric components
 github "flowdock",    "1.0.0"

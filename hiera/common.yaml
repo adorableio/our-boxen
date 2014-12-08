@@ -1,4 +1,6 @@
 ---
 
-"ruby::rubybuild_version": "v20141128"
-"ruby::chruby_version": "v0.3.9"
+"ruby::build::ensure": "v20141128"
+
+"ruby::version::alias":
+  "1.9.3": "1.9.3-p551"
