@@ -82,7 +82,7 @@ node default {
   }
 
   exec {'install node':
-    command => "/bin/bash -c 'source ${boxen::config::home}/homebrew/opt/nvm/nvm.sh && nvm install 0.10'"
+    command => "/bin/bash -c 'source ${boxen::config::home}/homebrew/opt/nvm/nvm.sh && nvm install 0.10 && nvm use 0.10'"
   }
 
   # Adorable-specific Applications
