@@ -76,6 +76,15 @@ node default {
     ]:
   }
 
+  # Install nvm and some packages
+  package {'nvm':
+    before => Exec['install node']
+  }
+
+  exec {'install node':
+    command => "/bin/bash -c 'source ${boxen::config::home}/homebrew/opt/nvm/nvm.sh && nvm install 0.10'"
+  }
+
   # Adorable-specific Applications
   include flowdock
   include googledrive
