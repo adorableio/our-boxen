@@ -45,6 +45,7 @@ config changes you feel appropriate based on your preferences.
 Add the following line to .profile, .bash\_profile, .zprofile, etc.
 
         [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+        [ -f $(brew --prefix nvm)/nvm.sh ] && source $(brew --prefix nvm)/nvm.sh
 
 * To allow **Spectacle** to change window sizes, open General Preferences | 
 Security & Privacy | Accessibility, unlock the Preferences and check the 
